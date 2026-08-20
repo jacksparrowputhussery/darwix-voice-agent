@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": 1.0,
+    "speaker": "agent",
+    "text": "Hello, thank you for calling. How can I help you?"
+  },
+  {
+    "timestamp": 5.0,
+    "speaker": "customer",
+    "text": "Hi, I want a business loan."
+  },
+  {
+    "timestamp": 10.0,
+    "speaker": "customer",
+    "text": "But I also need a car loan for my delivery vehicle."
+  },
+  {
+    "timestamp": 15.0,
+    "speaker": "agent",
+    "text": "Okay, let's look at the business loan first."
+  },
+  {
+    "timestamp": 20.0,
+    "speaker": "customer",
+    "text": "I am very angry that this is taking so long."
+  },
+  {
+    "timestamp": 25.0,
+    "speaker": "customer",
+    "text": "I am very angry about the interest rates too!"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "scenario": "objection",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "I need a loan, but why do you need my credit score?",
+      "audio": "outputs/q1/objection_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "We need your credit score to gauge the risk of lending to you, but first could you tell me how long your business has been operating?",
+      "audio": "outputs/q1/objection_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay, it's 680. We make 6000 a month and have been running for 2 years in Texas.",
+      "audio": "outputs/q1/objection_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Great, thanks for the details! You meet our preliminary requirements, and a loan officer will review your application shortly. Based on your answers, you meet our preliminary requirements! A loan officer will review your application.",
+      "audio": "outputs/q1/objection_turn_1_agent.mp3"
+    }
+  ],
+  "final_state": {
+    "session_id": "objection",
+    "qualification": {
+      "time_in_business_months": 24,
+      "monthly_revenue": 6000,
+      "location": "Texas",
+      "credit_score": 680
+    },
+    "conversation_history": [
+      {
+        "speaker": "customer",
+        "text": "I need a loan, but why do you need my credit score?",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "We need your credit score to gauge the risk of lending to you, but first could you tell me how long your business has been operating?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "Okay, it's 680. We make 6000 a month and have been running for 2 years in Texas.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Great, thanks for the details! You meet our preliminary requirements, and a loan officer will review your application shortly. Based on your answers, you meet our preliminary requirements! A loan officer will review your application.",
+        "role": "assistant"
+      }
+    ],
+    "objections": [],
+    "escalation_requested": false,
+    "human_required": false,
+    "last_status": "congratulations"
+  }
+}

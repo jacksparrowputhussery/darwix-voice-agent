@@ -1,0 +1,25 @@
+{
+  "scenario": "cooperative",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Hi, magkano po ang premium kung kukuha ako ng life insurance?",
+      "audio": "outputs/q3/philippines/cooperative_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Opo, para malaman ang eksaktong premium, kailangan ko munang malaman kung saan kayo nakabase. Ano po ang inyong lokasyon?",
+      "audio": "outputs/q3/philippines/cooperative_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "Ang beneficiary ko po sana ay ang asawa ko. Ano pong kailangan?",
+      "audio": "outputs/q3/philippines/cooperative_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Opo, para makuha ang tamang premium, kailangan ko munang malaman kung saan po kayo nakabase. Ano po ang inyong lokasyon?",
+      "audio": "outputs/q3/philippines/cooperative_turn_1_agent.mp3"
+    }
+  ]
+}

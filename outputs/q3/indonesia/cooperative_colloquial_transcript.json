@@ -1,0 +1,25 @@
+{
+  "scenario": "cooperative_colloquial",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Halo, cicilan bulan ini berapa ya?",
+      "audio": "outputs/q3/indonesia/cooperative_colloquial_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Halo! Untuk menghitung cicilan bulan ini, saya perlu tahu pendapatan bulanan Anda. Berapa pendapatan bulanan Anda?",
+      "audio": "outputs/q3/indonesia/cooperative_colloquial_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "Kalau mau bayar DP dulu bisa nggak?",
+      "audio": "outputs/q3/indonesia/cooperative_colloquial_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Tentu, Anda bisa melakukan pembayaran DP terlebih dahulu. Boleh saya tahu pendapatan bulanan Anda?",
+      "audio": "outputs/q3/indonesia/cooperative_colloquial_turn_1_agent.mp3"
+    }
+  ]
+}

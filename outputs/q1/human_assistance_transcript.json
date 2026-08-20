@@ -1,0 +1,34 @@
+{
+  "scenario": "human_assistance",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "I have a very complicated tax situation. Can I talk to a real person?",
+      "audio": "outputs/q1/human_assistance_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "It seems we need a human representative to assist you further. I am transferring you now.",
+      "audio": "outputs/q1/human_assistance_turn_0_agent.mp3"
+    }
+  ],
+  "final_state": {
+    "session_id": "human_assistance",
+    "qualification": {},
+    "conversation_history": [
+      {
+        "speaker": "customer",
+        "text": "I have a very complicated tax situation. Can I talk to a real person?",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "It seems we need a human representative to assist you further. I am transferring you now.",
+        "role": "assistant"
+      }
+    ],
+    "objections": [],
+    "escalation_requested": true,
+    "human_required": true
+  }
+}

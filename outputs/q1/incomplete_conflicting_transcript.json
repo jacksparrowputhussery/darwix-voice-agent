@@ -1,0 +1,96 @@
+{
+  "scenario": "incomplete_conflicting",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "I need a loan.",
+      "audio": "outputs/q1/incomplete_conflicting_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Sure! To get started, could you tell me how many months your business has been operating?",
+      "audio": "outputs/q1/incomplete_conflicting_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "We make 2000 dollars.",
+      "audio": "outputs/q1/incomplete_conflicting_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Got it\u2014$2,000 monthly revenue. How many months have you been in business?",
+      "audio": "outputs/q1/incomplete_conflicting_turn_1_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "Wait, I meant 8000 dollars.",
+      "audio": "outputs/q1/incomplete_conflicting_turn_2_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Got it\u2014$8,000 monthly revenue. How many months have you been in business?",
+      "audio": "outputs/q1/incomplete_conflicting_turn_2_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "I don't want to tell you my credit score.",
+      "audio": "outputs/q1/incomplete_conflicting_turn_3_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Sure thing! Where is your business located in the U.S.?",
+      "audio": "outputs/q1/incomplete_conflicting_turn_3_agent.mp3"
+    }
+  ],
+  "final_state": {
+    "session_id": "incomplete_conflicting",
+    "qualification": {
+      "monthly_revenue": 8000
+    },
+    "conversation_history": [
+      {
+        "speaker": "customer",
+        "text": "I need a loan.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Sure! To get started, could you tell me how many months your business has been operating?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "We make 2000 dollars.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Got it\u2014$2,000 monthly revenue. How many months have you been in business?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "Wait, I meant 8000 dollars.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Got it\u2014$8,000 monthly revenue. How many months have you been in business?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "I don't want to tell you my credit score.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Sure thing! Where is your business located in the U.S.?",
+        "role": "assistant"
+      }
+    ],
+    "objections": [],
+    "escalation_requested": false,
+    "human_required": false
+  }
+}

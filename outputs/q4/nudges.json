@@ -1,0 +1,18 @@
+[
+  {
+    "nudge_id": "sig1",
+    "type": "missed_cross_sell",
+    "nudge": "Customer mentioned an additional need. Suggest a relevant cross-sell offer.",
+    "reason": "Customer mentioned a car loan for delivery vehicle.",
+    "priority": "medium",
+    "created_at": 1787165624.683886
+  },
+  {
+    "nudge_id": "sig2",
+    "type": "rising_frustration",
+    "nudge": "Acknowledge the customer's concern before continuing.",
+    "reason": "I am very angry that this is taking so long.",
+    "priority": "high",
+    "created_at": 1787165628.268266
+  }
+]

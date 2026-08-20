@@ -1,0 +1,25 @@
+{
+  "scenario": "escalation_regional",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Nuwun sewu, kulo mau tanya soal denda jatuh tempo.",
+      "audio": "outputs/q3/indonesia/escalation_regional_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Maaf, saya tidak memiliki informasi tentang denda jatuh tempo. Untuk melanjutkan, bolehkah saya tahu lokasi usaha Anda?",
+      "audio": "outputs/q3/indonesia/escalation_regional_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "I want to talk to an agent please, I don't understand the tenor.",
+      "audio": "outputs/q3/indonesia/escalation_regional_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "It seems we need a human representative to assist you further. I am transferring you now.",
+      "audio": "outputs/q3/indonesia/escalation_regional_turn_1_agent.mp3"
+    }
+  ]
+}

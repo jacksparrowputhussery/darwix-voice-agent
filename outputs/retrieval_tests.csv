@@ -1,0 +1,6 @@
+query,expected_source,retrieved_source,top_score,relevance_reason,verdict
+What is the minimum revenue required for a business loan?,business_loan_policy.txt,data\raw\business_loan_policy.txt,0.504,"BUSINESS LOAN QUALIFICATION POLICY Effective Date: January 1, 2026 1. Eligibility Requirements To qu...",correct
+Do you provide funding to adult entertainment businesses?,business_loan_policy.txt,data\raw\faq.csv#row=3,0.3922,question: Do you fund startups? answer: No None: [' we require at least 12 months of operational his...,incorrect
+What are the available repayment terms?,business_loan_policy.txt,data\raw\faq.csv#row=5,0.5951,"question: What are the repayment terms? answer: You can choose repayment terms of 12 None: [' 24', '...",incorrect
+Can I apply if my credit score is 600?,faq.csv,data\raw\faq.csv#row=4,0.6274,question: Can I apply if my credit score is 600? answer: Unfortunately no None: [' the minimum perso...,correct
+How long does the business need to be operating?,business_loan_policy.txt,data\raw\faq.csv#row=2,0.7722,question: How long does the business need to be operating? answer: The business must be operating fo...,incorrect

@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "Default Pipeline",
+    "provider_used": "groq",
+    "model": "openai/gpt-oss-20b",
+    "fallback_used": false,
+    "latency_ms": 918.21,
+    "response_excerpt": "Great! How long has your business been operating, in months?...",
+    "extracted_fields": {}
+  },
+  {
+    "mode": "Forced Fallback (Groq Disabled)",
+    "provider_used": "gemini",
+    "model": "gemini-flash-latest",
+    "fallback_used": true,
+    "latency_ms": 17554.54,
+    "response_excerpt": "I can help see if you qualify for a business loan today. To get started, how lon...",
+    "extracted_fields": {}
+  },
+  {
+    "mode": "Offline Heuristic Fallback",
+    "provider_used": "offline_fallback",
+    "model": "rule_based",
+    "fallback_used": true,
+    "latency_ms": 0.24,
+    "response_excerpt": "We check credit score to ensure preliminary eligibility (minimum 650). What is y...",
+    "extracted_fields": {
+      "time_in_business_months": 24,
+      "location": "Texas"
+    }
+  }
+]

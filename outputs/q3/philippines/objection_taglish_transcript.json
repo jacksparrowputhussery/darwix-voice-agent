@@ -1,0 +1,25 @@
+{
+  "scenario": "objection_taglish",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Ang mahal naman ng premium. Pwede bang babaan yung coverage para mas mura?",
+      "audio": "outputs/q3/philippines/objection_taglish_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Opo, pwede po nating i-adjust ang coverage. Para mas maayos naming matulungan, puwede po bang sabihin kung ilang buwan na ang negosyo ninyo?",
+      "audio": "outputs/q3/philippines/objection_taglish_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "What if mag-lapse yung policy ko dahil nakalimutan ko magbayad?",
+      "audio": "outputs/q3/philippines/objection_taglish_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Kung mag-lapse ang policy, maibabalik ang premium na hindi pa naipapasa, pero mawawala ang coverage. Pwede po ninyong i-activate ang auto-pay o mag-set ng reminder para hindi na ito mangyari.",
+      "audio": "outputs/q3/philippines/objection_taglish_turn_1_agent.mp3"
+    }
+  ]
+}

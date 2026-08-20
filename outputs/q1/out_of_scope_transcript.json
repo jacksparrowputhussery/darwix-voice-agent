@@ -1,0 +1,54 @@
+{
+  "scenario": "out_of_scope",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "What's the weather like today?",
+      "audio": "outputs/q1/out_of_scope_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "I\u2019m sorry, I don\u2019t have weather information. I can connect you to a human if you\u2019d like.",
+      "audio": "outputs/q1/out_of_scope_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "Can you tell me a joke?",
+      "audio": "outputs/q1/out_of_scope_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Sure! Why don't scientists trust atoms? Because they make up everything!",
+      "audio": "outputs/q1/out_of_scope_turn_1_agent.mp3"
+    }
+  ],
+  "final_state": {
+    "session_id": "out_of_scope",
+    "qualification": {},
+    "conversation_history": [
+      {
+        "speaker": "customer",
+        "text": "What's the weather like today?",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "I\u2019m sorry, I don\u2019t have weather information. I can connect you to a human if you\u2019d like.",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "Can you tell me a joke?",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Sure! Why don't scientists trust atoms? Because they make up everything!",
+        "role": "assistant"
+      }
+    ],
+    "objections": [],
+    "escalation_requested": false,
+    "human_required": false
+  }
+}

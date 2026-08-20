@@ -1,0 +1,15 @@
+.env
+*.key
+*.pem
+credentials.json
+secrets/
+customer_data/
+recordings/private/
+__pycache__/
+*.pyc
+.venv/
+venv/
+chroma_db/
+models/
+*.db
+*.sqlite3

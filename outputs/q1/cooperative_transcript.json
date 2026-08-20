@@ -1,0 +1,120 @@
+{
+  "scenario": "cooperative",
+  "transcript": [
+    {
+      "speaker": "customer",
+      "text": "Hi, I want to apply for a business loan.",
+      "audio": "outputs/q1/cooperative_turn_0_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Great! How long has your business been operating, in months?",
+      "audio": "outputs/q1/cooperative_turn_0_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "My business has been running for 3 years.",
+      "audio": "outputs/q1/cooperative_turn_1_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks! How much do you bring in each month on average?",
+      "audio": "outputs/q1/cooperative_turn_1_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "We make about $10,000 a month.",
+      "audio": "outputs/q1/cooperative_turn_2_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Got it, $10,000 monthly. Could you share your personal credit score?",
+      "audio": "outputs/q1/cooperative_turn_2_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "My credit score is 720.",
+      "audio": "outputs/q1/cooperative_turn_3_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for that! Where is your business located in the U.S.?",
+      "audio": "outputs/q1/cooperative_turn_3_agent.mp3"
+    },
+    {
+      "speaker": "customer",
+      "text": "We are based in New York.",
+      "audio": "outputs/q1/cooperative_turn_4_customer.mp3"
+    },
+    {
+      "speaker": "agent",
+      "text": "Great news! You meet all our preliminary requirements, and a loan officer will review your application shortly. Based on your answers, you meet our preliminary requirements! A loan officer will review your application.",
+      "audio": "outputs/q1/cooperative_turn_4_agent.mp3"
+    }
+  ],
+  "final_state": {
+    "session_id": "cooperative",
+    "qualification": {
+      "time_in_business_months": 36,
+      "monthly_revenue": 10000,
+      "credit_score": 720,
+      "location": "New York"
+    },
+    "conversation_history": [
+      {
+        "speaker": "customer",
+        "text": "Hi, I want to apply for a business loan.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Great! How long has your business been operating, in months?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "My business has been running for 3 years.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Thanks! How much do you bring in each month on average?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "We make about $10,000 a month.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Got it, $10,000 monthly. Could you share your personal credit score?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "My credit score is 720.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Thanks for that! Where is your business located in the U.S.?",
+        "role": "assistant"
+      },
+      {
+        "speaker": "customer",
+        "text": "We are based in New York.",
+        "role": "user"
+      },
+      {
+        "speaker": "agent",
+        "text": "Great news! You meet all our preliminary requirements, and a loan officer will review your application shortly. Based on your answers, you meet our preliminary requirements! A loan officer will review your application.",
+        "role": "assistant"
+      }
+    ],
+    "objections": [],
+    "escalation_requested": false,
+    "human_required": false,
+    "last_status": "congratulations"
+  }
+}

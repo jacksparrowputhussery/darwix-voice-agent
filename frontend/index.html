@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darwix • AI Voice Agent & Intelligence Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <div class="app-layout">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="brand-section">
+                <div class="brand-logo">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" x2="12" y1="19" y2="22"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-title">DARWIX <span>AI</span></div>
+                    <div class="brand-subtitle">Voice Agent & Qualification Engine</div>
+                </div>
+            </div>
+
+            <div class="header-badges">
+                <div class="badge-item" id="connectionBadge">
+                    <span class="status-dot connected"></span>
+                    <span class="badge-label" id="connectionStatusText">Live Connected</span>
+                </div>
+                <div class="badge-item model-badge" id="modelBadge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    <span id="activeModelText">Groq • Fast Inference</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn-voice-mode" id="voiceModeToggleBtn" title="Switch between Instant Browser Speech (0ms) and Server Neural Speech">
+                    <span class="mode-icon">⚡</span>
+                    <span id="voiceModeText">Fast Voice (0ms)</span>
+                </button>
+                <button class="btn-icon" id="audioToggleBtn" title="Toggle Auto-play Audio">
+                    <svg id="audioIconOn" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                    </svg>
+                    <svg id="audioIconOff" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <line x1="23" y1="9" x2="17" y2="15"/>
+                        <line x1="17" y1="9" x2="23" y2="15"/>
+                    </svg>
+                </button>
+                <button class="btn-secondary" id="resetSessionBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                        <path d="M3 3v5h5"/>
+                    </svg>
+                    <span>Reset</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Workspace Grid -->
+        <main class="dashboard-grid">
+            
+            <!-- Left / Center: Voice & Chat Interface -->
+            <section class="chat-section">
+                
+                <!-- Central Voice Interactive Orb & Visualizer -->
+                <div class="voice-hub-card">
+                    <div class="orb-container">
+                        <canvas id="visualizerCanvas" width="400" height="140"></canvas>
+                        
+                        <div class="voice-action-wrapper">
+                            <button id="voiceRecordBtn" class="voice-btn idle" aria-label="Start Voice Recording">
+                                <div class="pulse-ring ring-1"></div>
+                                <div class="pulse-ring ring-2"></div>
+                                <div class="btn-inner">
+                                    <svg class="mic-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                        <line x1="12" x2="12" y1="19" y2="22"/>
+                                    </svg>
+                                    <svg class="stop-icon hidden" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="6" y="6" width="12" height="12" rx="2"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="voice-status-bar">
+                        <div class="status-pill" id="agentStatePill">
+                            <span class="status-indicator"></span>
+                            <span id="agentStateText">Click to Speak or Type Below</span>
+                        </div>
+                        <div class="recording-timer hidden" id="recordingTimer">00:00</div>
+                    </div>
+
+                    <!-- Quick Starter Chips -->
+                    <div class="scenarios-container">
+                        <span class="scenarios-title">Quick Scenarios:</span>
+                        <div class="chip-carousel">
+                            <button class="chip" data-prompt="I have been running my business for 2 years, make $25,000 monthly revenue, credit score is 720, and located in California.">
+                                <span class="chip-icon">🌟</span> Full Qualification
+                            </button>
+                            <button class="chip" data-prompt="We have been operating for 6 months and make $3,000 in monthly revenue in Texas.">
+                                <span class="chip-icon">⚠️</span> Early Stage / Below Minimum
+                            </button>
+                            <button class="chip" data-prompt="What are the minimum revenue and credit score requirements to qualify for a business loan?">
+                                <span class="chip-icon">📄</span> Policy Guidelines
+                            </button>
+                            <button class="chip" data-prompt="I want to escalate this and speak to a human loan officer.">
+                                <span class="chip-icon">👤</span> Human Escalation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Transcript Feed -->
+                <div class="transcript-card">
+                    <div class="transcript-header">
+                        <div class="transcript-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Live Conversation Stream
+                        </div>
+                        <div class="transcript-meta">
+                            <span id="turnCounter">0 turns</span>
+                        </div>
+                    </div>
+
+                    <div class="messages-stream" id="messagesStream">
+                        <!-- Welcome message -->
+                        <div class="message-bubble agent-bubble welcome-message">
+                            <div class="message-avatar">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    <line x1="12" x2="12" y1="19" y2="22"/>
+                                </svg>
+                            </div>
+                            <div class="message-body">
+                                <div class="message-author">Darwix Assistant <span class="author-tag">AI Voice</span></div>
+                                <div class="message-content">
+                                    Hello! I'm your AI Business Loan Qualification Specialist. I can help evaluate your eligibility in real time. To get started, how long has your business been operating, and what is your average monthly revenue?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Controls -->
+                    <div class="input-controls-bar">
+                        <form id="textChatForm" class="chat-form">
+                            <input 
+                                type="text" 
+                                id="textInput" 
+                                class="text-input" 
+                                placeholder="Type a response or question (or use voice above)..." 
+                                autocomplete="off"
+                            >
+                            <button type="submit" id="sendTextBtn" class="btn-send" title="Send Message">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right Column: Qualification Radar & Diagnostics -->
+            <aside class="sidebar-section">
+                
+                <!-- Underwriting Scorecard -->
+                <div class="card panel-card qualification-card">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Underwriting Qualification
+                        </div>
+                        <span class="eval-progress" id="qualProgressBadge">0 / 4 Met</span>
+                    </div>
+
+                    <!-- Dynamic Decision Banner -->
+                    <div class="decision-banner state-pending" id="decisionBanner">
+                        <div class="banner-icon" id="decisionIcon">⏳</div>
+                        <div class="banner-content">
+                            <div class="banner-title" id="decisionTitle">Evaluating Eligibility</div>
+                            <div class="banner-desc" id="decisionDesc">Provide business operating time, revenue, credit, and location to qualify.</div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Checklist items (Rendered directly from policy .txt) -->
+                    <div class="qualification-checklist" id="qualificationChecklist">
+                        <!-- Populated dynamically by app.js from /api/requirements and /api/session -->
+                    </div>
+                </div>
+
+                <!-- Grounding & Engine Diagnostics Card -->
+                <div class="card panel-card diagnostics-card">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                            Engine & Grounding Info
+                        </div>
+                    </div>
+
+                    <div class="diagnostics-list">
+                        <div class="diag-item">
+                            <span class="diag-label">Inference Latency</span>
+                            <span class="diag-value font-mono" id="lastLatencyVal">0 ms</span>
+                        </div>
+                        <div class="diag-item">
+                            <span class="diag-label">Knowledge Grounding</span>
+                            <span class="diag-value">ChromaDB • Vector Search</span>
+                        </div>
+                        <div class="diag-item">
+                            <span class="diag-label">Human Escalation</span>
+                            <span class="diag-value text-normal" id="escalationStatusText">Not Requested</span>
+                        </div>
+                        <div class="diag-item">
+                            <span class="diag-label">ASR & TTS Engines</span>
+                            <span class="diag-value" id="speechEnginesText">Whisper + Kokoro-82M / EdgeTTS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+        </main>
+    </div>
+
+    <!-- Hidden audio element for speech playback -->
+    <audio id="globalAudioPlayer" preload="auto"></audio>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
