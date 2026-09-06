@@ -92,20 +92,3 @@ To minimize conversational latency and ensure high availability, the platform us
   pytest voice_agent/tests/test_llm_fallback.py -v
   ```
 
-### Question 1: Knowledge-Grounded Voice Agent
-- Live voice backend (web calling interface): `python voice_agent/api.py` (Open `http://localhost:8000`)
-- Automated batch tests: `python scripts/run_voice_demo.py`
-- Output: `outputs/q1/`
-
-### Question 2: Knowledge Base Ingestion & Evaluation
-- Ingest raw data into ChromaDB: `python scripts/ingest_data.py`
-- Run retrieval tests: `python scripts/evaluate_retrieval.py`
-- Output: `outputs/retrieval_tests.csv`
-
-### Question 3: Native-Language Voice Bots
-- Run Taglish and Bahasa Indonesia tests: `python scripts/run_multilingual_demo.py`
-- Output: `outputs/q3/`
-
-### Question 4: Real-Time Insights & Nudges
-- Run real-time simulation with low-latency signal extraction: `python scripts/run_realtime_demo.py`
-- Output: `outputs/q4/` (live nudges, suppression logs, and latency report)
